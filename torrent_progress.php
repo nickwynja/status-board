@@ -92,8 +92,6 @@ $arr = $reply->arguments->torrents;
 $arr = array_reverse($arr);
 $now = time();
 
-// var_dump($arr);
-
 echo "<html>
       <body>
       <table id='projects'>";
@@ -103,7 +101,7 @@ $count = 0;
 
 foreach ($arr as $tor)
 {
-  if (($now - $tor->doneDate) < 360000)
+  if (($tor->haveValid < $tor->totalSize) || (($now - $tor->doneDate) < 360000))
   {
     $percent = round(($tor->haveValid / $tor->totalSize)*100);
     $value = roundUpTo((($percent / 10) / 1.25), 1);
