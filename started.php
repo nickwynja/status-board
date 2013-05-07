@@ -17,23 +17,28 @@
     }
 
     h2 {
-      color: #666;
-      font-family: "Roadgeek 2005 Series C";
-      font-size: 24px;
       border-bottom: 2px solid #111;
-      padding: 12px 0;
+      color: #555;
+      font-family: "Roadgeek 2005 Series C";
+      font-weight: normal;
+      font-size: 26px;
+      padding: 13px 0 10px 0;
       margin: 0;
       text-align: center;
       text-transform: uppercase;
     }
 
     h3 {
-      margin-left: 6px;
+      color: #808080;
+      font-weight: normal;
+      margin: 10px 0 10px 6px;
     }
 
     ul {
       font-size: 20px;
       list-style: none;
+      padding-left: 20px;
+      margin: 0;
     }
 
     li {
