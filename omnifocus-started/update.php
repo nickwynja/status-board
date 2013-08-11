@@ -1,16 +1,12 @@
 <?php
-
-  $script_path = dirname(__FILE__);
-  $output = shell_exec('osascript ' . $script_path . '/started.applescript');
-  $j = json_decode($output, TRUE);
-
-foreach ($j as $group)
-{
-  print "<h3>" . $group[0] . ":</h3>";
-  print "<ul>";
-  foreach ($group[1] as $item)
+  putenv("HOME=/Users/brain");
+  $tasks['Inbox'] = `. /Users/brain/.bashrc && /usr/local/bin/ofexport -E -a done=any -I -p name='Inbox' --tasks -T html-lite`;
+  $tasks['Started'] = `. /Users/brain/.bashrc && /usr/local/bin/ofexport -E -a done=any -I -t "started='to today'" --tasks -T html-lite`;
+  foreach ($tasks as $type => $list)
   {
-    print "<li>&#9633;&nbsp;" . $item . "</li>";
+    if (strpos($list, 'li') !== false)
+    {
+      print "<h3>".$type."</h3>";
+      print $list;
+    }
   }
-  print "</ul>";
-}

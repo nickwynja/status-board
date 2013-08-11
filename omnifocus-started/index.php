@@ -7,22 +7,21 @@
     }
 
     #header {
-      background-color: #222;
       position: fixed;
       width: 100%;
     }
 
     #container {
-      padding-top: 50px;
+      padding-top: 60px;
     }
 
     h2 {
       border-bottom: 2px solid #111;
-      color: #555;
+      color: #666;
       font-family: "Roadgeek 2005 Series C";
       font-weight: normal;
-      font-size: 26px;
-      padding: 13px 0 10px 0;
+      font-size: 30px;
+      padding: 16px 0 10px 0;
       margin: 0;
       text-align: center;
       text-transform: uppercase;
@@ -31,7 +30,7 @@
     h3 {
       color: #808080;
       font-weight: normal;
-      margin: 10px 0 10px 6px;
+      margin: 10px 0 10px 10px;
     }
 
     ul {
@@ -45,6 +44,12 @@
       list-style-type: none;
       padding: 0;
     }
+
+    li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
   </style>
   <script type="text/javascript">
     function refresh() {
